@@ -1,0 +1,24 @@
+/* @media(max-width: 768px){
+.artcile .container{
+  display: grid!important;
+  grid-template-columns: repeat(auto-fill, minmax(145px,1fr))!important;
+  gap: 15px  !important;
+  padding: 10px !important;
+}
+} */
+
+@media(max-width: 768px){
+.producti .prod {
+padding: 5px !important;
+}
+}
+
+
+/* start footer */
+@media(max-width: 991px) {
+    .footer {
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+/* end footer */

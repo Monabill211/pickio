@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>سلة المشتريات</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/office.css" />
+    <link rel="stylesheet" href="css/office-m.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobil.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      charset="UTF-8"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .baskt {
+        font-family: Arial;
+        padding: 20px;
+        direction: rtl;
+        background-color: #f9f9f9;
+      }
+      .baskt h1 {
+        text-align: center;
+        font-size: 70px;
+        font-weight: bold;
+      }
+      .baskt p {
+        font-size: 30px;
+        text-align: center;
+        padding: 100px;
+        font-weight: bold;
+      }
+      .baskt #cart-items {
+        display: flex;
+        gap: 1%;
+      }
+      .baskt .cart-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        width: 24%;
+      }
+      .baskt .cart-item img {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      .baskt .cart-item p {
+        padding: 5px;
+        font-weight: bold;
+        padding: 0;
+      }
+
+      .baskt .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+      .baskt button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      #clear-btn {
+        background: #f44336;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+      }
+      #whatsapp-btn {
+        background: #25d366;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://kit.fontawesome.com/1fbbe0b01a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--start hedaer-->
+    <div class="hedaer">
+      <div class="conteiner">
+        <div class="logo">
+          <h2 class="name">Pic<span>k</span>io</h2>
+        </div>
+        <!-- <i class="fa-solid fa-bars"></i> -->
+        <ul class="serves">
+          <li><a href="index.html">الرئسية</a></li>
+          <li><a href="who-me.html">من نحن</a></li>
+          <li><a href="montgat.html">منتجاتنا</a></li>
+          <li><a href="protfoile.html">سابقة اعمالنا</a></li>
+          <li><a href="comm.html"> تواصل معانا</a></li>
+
+          <button id="open-menu" class="open-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </ul>
+      </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+      <button id="close-menu" class="close-btn">✖</button>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="who-me.html">من نحن</a></li>
+        <li><a href="montgat.html">منتجاتنا</a></li>
+        <li><a href="protfoile.html">سابقة أعمالنا</a></li>
+        <li><a href="comm.html"> تواصل معانا </a></li>
+        <li><a href="office.html"> مكاتب</a></li>
+        <li><a href="chers.html"> كراسي </a></li>
+        <li><a href="conter.html">كونترات</a></li>
+        <li><a href="meeting.html"> اجتماعات طربيزات</a></li>
+        <li><a href="work-st.html"> خلية عمل</a></li>
+        <li id="baskt"><a href="cart.html">السلة</a></li>
+      </ul>
+    </div>
+    <!---->
+    <div class="baskt">
+      <h1>🛒 سلة المشتريات</h1>
+      <div id="cart-items"></div>
+      <div class="buttons">
+        <button id="whatsapp-btn">إرسال طلب</button>
+        <button id="clear-btn">إفراغ السلة</button>
+      </div>
+    </div>
+    <script>
+      const mycart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartItemsContainer = document.getElementById("cart-items");
+      // عرض السلة
+      if (mycart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>السلة فارغة</p>";
+      } else {
+        mycart.forEach((item) => {
+          const itemElement = document.createElement("div");
+          itemElement.className = "cart-item";
+          itemElement.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <p><strong> اسم المنتج:</strong> ${item.name}</p>
+          <p><strong>وصف المنتج:</strong> ${item.price}</p>
+        `;
+          cartItemsContainer.appendChild(itemElement);
+        });
+      }
+      // زرار إفراغ السلة
+      document.getElementById("clear-btn").addEventListener("click", () => {
+        localStorage.removeItem("cart");
+        location.reload();
+      });
+      // زرار إرسال واتساب
+      document.getElementById("whatsapp-btn").addEventListener("click", () => {
+        if (mycart.length === 0) {
+          alert("السلة فارغة!");
+          return;
+        }
+        let message = "🛒 محتويات سلة المشتريات:\n\n";
+        mycart.forEach((item, index) => {
+          message += `${index + 1}- ${item.name} - ${item.price} جنيه\n(كود: ${
+            item.code
+          })\nرابط الصورة: ${item.image}\n\n`;
+        });
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/201110094460?text=${encodedMessage}`; // ضع رقمك هنا
+        window.open(whatsappUrl, "_blank");
+      });
+    </script>
+
+    <!-- strat -->
+    <div class="wathsap">
+      <div class="phone">
+        <a href="tel:201021219588"><i class="fa-solid fa-phone"></i></a>
+      </div>
+      <div class="weth">
+        <a
+          href="https://wa.me/201021219588?text=السلام%20عليكم،%20أنا%20مهتم%20بخدماتكم"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+    </div>
+    <!-- end -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="right">
+          <h2 class="name">Pic<span>k</span>io</h2>
+          <p>
+            نلتزم بتقديم الجودة التي تثق بها <br />والخدمة التي تعتمد عليها في
+            كل خطوة
+          </p>
+
+          <div class="logos">
+            <p class="icon">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-tiktok"></i>
+            </p>
+          </div>
+        </div>
+        <div class="center">
+          <div class="locion icon">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>7 Esmat Khedr Street, off
+              El-Nozha nasr city
+            </p>
+          </div>
+          <div class="phone icon">
+            <p>
+              <a href="tel:201021219588"><i class="fa-solid fa-phone"></i></a
+              >01016434958
+            </p>
+          </div>
+          <div class="email icon">
+            <p><i class="fa fa-envelope"></i>pickiooffice@gmail.com</p>
+          </div>
+        </div>
+        <div class="left">
+          <div class="logo">
+            <h2 class="name">Pic<span>k</span>io</h2>
+          </div>
+          <p>سياسية الاسترجاع</p>
+          <p>سياسة الخصوصية</p>
+          <p>الشروط و الاحكام</p>
+          <p>الضمان</p>
+        </div>
+      </div>
+      <div class="nkbl">
+        <h2>نحن نقبل</h2>
+        <img src="iemg/aman.adafb70a.png" alt="" />
+        <img src="iemg/master.90080a1a.svg" alt="" />
+        <img src="iemg/premium.d73fb905.png" alt="" />
+        <img src="iemg/souhoola.9744d9f9.jpg" alt="" />
+        <img src="iemg/sympl.24a60472.png" alt="" />
+        <img src="iemg/valu.e0b214fb.png" alt="" />
+        <img src="iemg/vcash.35c6becb.png" alt="" />
+        <img src="iemg/visa.76742dc7.svg" alt="" />
+      </div>
+      <div class="copy">Ⓒ جميع الحقوق محفوظة 2025</div>
+    </div>
+    <!-- end footer -->
+    <script src="JS/mine.js"></script>
+  </body>
+</html>

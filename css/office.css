@@ -1,0 +1,267 @@
+/*start hedaer*/
+.hedaer{
+    position: relative;
+    direction: ltr;
+    background-color: #898989d6;
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    z-index: 100;
+}
+
+.hedaer .conteiner{
+display: flex;
+justify-content: space-between;
+margin: 0 20px;
+}
+.hedaer .conteiner .logo{
+        text-align: center;
+    align-items: center;
+    display: flex;
+    
+}
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    color: black;
+margin: 0;
+}
+.name span{
+    color: red;
+}
+.hedaer .conteiner ul{
+    display: flex;
+    gap: 63px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.hedaer .conteiner ul li{
+display: flex;
+}
+.hedaer .conteiner ul li a{
+color:black;
+font-weight: bold;
+font-size: 18px;
+    padding: 25px;
+    background-color: #89898900;
+    transition: var(--min-transitio);
+    position: relative;
+    overflow: hidden;
+}
+
+.hedaer .conteiner ul li a:hover{
+    color: var(--min-color);
+
+}
+.hedaer .conteiner ul li a::before{
+content: "";
+position: absolute;
+width: 100%;
+height:4px;
+background-color: var(--min-color);
+top: 0;
+left:-100%;
+transition: var(--min-transitio);
+}
+.hedaer .conteiner ul li a:hover::before{
+    left: 0;
+}
+.links{
+position: fixed;
+top: 0;
+background-color: white;
+width: 250px;
+z-index: 1000;
+min-height: 100vh;
+transition: 0.4s;
+    right: -250px;
+}
+.links.open{
+    right: -250px;
+    right: 0;
+}
+.links i{
+    right: 280px;
+    position: absolute;
+    color: red;
+    font-size: 23px;
+    top: 24px;
+}
+
+.links .link{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.links h2{
+    font-size: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid #aba7a7;
+    padding: 20px;
+}
+.links h2 span{
+    color: var(--min-color);
+}
+.links .contant{
+padding: 35px;
+    font-weight: 900;
+    font-size: 24px;
+        width: 100%;
+    text-align: center;
+border-bottom: 4px solid red;
+}
+.links .contant:hover{
+color: var(--min-color);
+    background-color: #f3f3f3;
+}
+
+
+
+.open-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* يبدأ من الخارج */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 999;
+}
+
+.sidebar.show {
+  right: 0; /* عند الفتح، يظهر الشريط */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.close-btn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.artcile{
+padding-top: var(--min-padding-top);
+padding-bottom: var(--min-padding-bottom);
+position: relative;
+}
+
+
+.artcile .container .boxs{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform var(--min-transitio), box-shadow var(--min-transitio);
+}
+.artcile .container .boxs:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 /40%);
+}
+.artcile .container .boxs img{
+    max-width: 100%;
+}
+.artcile .container .boxs .img{
+position: relative;
+}
+
+.artcile .container .boxs .img i {
+    top: 11px;
+    position: absolute;
+    right: 11px;
+    background-color: #c9c9c9ba;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.artcile .container .boxs .content{
+    padding: 20px;
+}
+.artcile .container .boxs .content h3{
+margin: 0;
+
+}
+
+.artcile .container .boxs .content p{
+margin: 10px 0 0;
+line-height: 1.5;
+color: #777;
+
+}
+
+.artcile .container .boxs .info{
+    padding: 10px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.artcile .container .boxs .info a{
+color: var(--min-color);
+font-weight: bold;
+
+}
+.artcile .container .boxs .info i{
+color: var(--min-color);
+
+}
+.artcile .container .boxs:hover .info i{
+animation: moing-arrow 0.6s linear infinite;
+
+
+}
+
+.artcile .container .inbox {
+    border-top: 1px solid #e6e6e7;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--min-color);
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Pickio</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/office.css" />
+    <link rel="stylesheet" href="css/office-m.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobil.css" />
+    <link rel="stylesheet" href="css/produc.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      charset="UTF-8"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <!-- <div class="links">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <div class="link">
+              <h2>Pic<span>k</span>io</h2>
+              <div class="contant">طربيزات اجتماعات</div>
+              <div class="contant">خلايا عمل</div>
+              <div class="contant">كونتر استقبال</div>
+              <div class="contant">نتريه</div>
+              <div class="contant">كراسي</div>
+            </div>
+          </div> -->
+  <!-- </div> -->
+  <body>
+    <script
+      src="https://kit.fontawesome.com/1fbbe0b01a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--start hedaer-->
+    <div class="hedaer">
+      <div class="conteiner">
+        <div class="logo">
+          <h2 class="name">Pic<span>k</span>io</h2>
+        </div>
+        <!-- <i class="fa-solid fa-bars"></i> -->
+        <ul class="serves">
+          <li><a href="index.html">الرئسية</a></li>
+          <li><a href="who-me.html">من نحن</a></li>
+          <li><a href="montgat.html">منتجاتنا</a></li>
+          <li><a href="protfoile.html">سابقة اعمالنا</a></li>
+          <li><a href="comm.html"> تواصل معانا</a></li>
+
+          <button id="open-menu" class="open-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </ul>
+      </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+      <button id="close-menu" class="close-btn">✖</button>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="who-me.html">من نحن</a></li>
+        <li><a href="montgat.html">منتجاتنا</a></li>
+        <li><a href="protfoile.html">سابقة أعمالنا</a></li>
+        <li><a href="comm.html"> تواصل معانا </a></li>
+        <li><a href="office.html"> مكاتب</a></li>
+        <li><a href="chers.html"> كراسي </a></li>
+        <li><a href="conter.html">كونترات</a></li>
+        <li><a href="meeting.html"> اجتماعات طربيزات</a></li>
+        <li><a href="work-st.html"> خلية عمل</a></li>
+        <li id="baskt"><a href="cart.html">السلة</a></li>
+      </ul>
+    </div>
+    <!---->
+
+    <div class="card" data-code="D004">
+      <div class="left">
+        <img src="3.jpg" alt="Yellow Chair" width="300" />
+      </div>
+
+      <div class="right">
+        <h4>CHAIRS</h4>
+        <h2>Modern Yellow Chair</h2>
+        <div class="price">$420</div>
+        <div class="stars">★★★★☆</div>
+
+        <div class="tab-buttons">
+          <button class="active" onclick="showTab('description', this)">
+            DESCRIPTION
+          </button>
+          <button onclick="showTab('details', this)">DETAILS</button>
+        </div>
+
+        <div class="tab-content">
+          <div id="description" class="tab active">
+            <p>
+              This is a modern yellow chair with a stylish design and great
+              comfort.
+            </p>
+          </div>
+          <div id="details" class="tab">
+            <p>
+              Material: Steel & Foam<br />Dimensions: 80x80x90cm<br />Color:
+              Yellow
+            </p>
+          </div>
+          <div id="comments" class="tab">
+            <p>No comments yet. Be the first to leave a review!</p>
+          </div>
+        </div>
+
+        <div class="options">
+          <p style="margin-top: 20px">العدد:</p>
+          <div class="quantity-controls">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">2</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+
+          <p style="margin-top: 20px">السعر الكلي:</p>
+          <div class="total-price" id="total-price">$840</div>
+        </div>
+
+        <div class="buttons">
+          <button class="wishlist" onclick="addToCart(this)">
+            ADD TO MY WISHLIST
+          </button>
+          <button class="cart">ADD TO CART</button>
+          <span class="product-code" style="display: none">D004</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="artcile">
+      <div class="mian-title">
+        <a href="chers.html"><h1>منتجات ذات صله</h1></a>
+        <a href="chers.html">
+          <h3>
+            عرض المزيد
+            <i class="fa-solid fa-arrow-right"></i></h3
+        ></a>
+      </div>
+      <div class="container">
+        <!-- كرت 1 -->
+        <div class="boxs">
+          <div class="img">
+            <img src="2.jpg" alt="مصباح سقف معدن أبيض" />
+            <i class="fa-regular fa-heart toggle-heart"></i>
+          </div>
+          <div class="content">
+            <p class="product-name">مصباح سقف معدن<br />أبيض - 60×30 سم</p>
+            <div class="price-box">
+              <span class="discount">-11%</span>
+              <span class="old-price">1,139</span>
+              <span class="currency">جنيه</span>
+              <span class="new-price">1,019</span>
+            </div>
+          </div>
+          <div class="inbox" onclick="addToCart(this)">اضافة الي السلة</div>
+          <span class="product-code" style="display: none">LAMP001</span>
+        </div>
+
+        <!-- كرت 2 -->
+        <div class="boxs">
+          <div class="img">
+            <img src="2.jpg" alt="مصباح سقف معدن أبيض" />
+            <i class="fa-regular fa-heart toggle-heart"></i>
+          </div>
+          <div class="content">
+            <p class="product-name">مصباح سقف معدن<br />أبيض - 60×30 سم</p>
+            <div class="price-box">
+              <span class="discount">-11%</span>
+              <span class="old-price">1,139</span>
+              <span class="currency">جنيه</span>
+              <span class="new-price">1,019</span>
+            </div>
+          </div>
+          <div class="inbox" onclick="addToCart(this)">اضافة الي السلة</div>
+          <span class="product-code" style="display: none">LAMP001</span>
+        </div>
+
+        <!-- كرت 3 -->
+        <div class="boxs">
+          <div class="img">
+            <img src="2.jpg" alt="مصباح سقف معدن أبيض" />
+            <i class="fa-regular fa-heart toggle-heart"></i>
+          </div>
+          <div class="content">
+            <p class="product-name">مصباح سقف معدن<br />أبيض - 60×30 سم</p>
+            <div class="price-box">
+              <span class="discount">-11%</span>
+              <span class="old-price">1,139</span>
+              <span class="currency">جنيه</span>
+              <span class="new-price">1,019</span>
+            </div>
+          </div>
+          <div class="inbox" onclick="addToCart(this)">اضافة الي السلة</div>
+          <span class="product-code" style="display: none">LAMP001</span>
+        </div>
+
+        <!-- كرت 4 -->
+        <div class="boxs">
+          <div class="img">
+            <img src="2.jpg" alt="مصباح سقف معدن أبيض" />
+            <i class="fa-regular fa-heart toggle-heart"></i>
+          </div>
+          <div class="content">
+            <p class="product-name">مصباح سقف معدن<br />أبيض - 60×30 سم</p>
+            <div class="price-box">
+              <span class="discount">-11%</span>
+              <span class="old-price">1,139</span>
+              <span class="currency">جنيه</span>
+              <span class="new-price">1,019</span>
+            </div>
+          </div>
+          <div class="inbox" onclick="addToCart(this)">اضافة الي السلة</div>
+          <span class="product-code" style="display: none">LAMP001</span>
+        </div>
+      </div>
+    </div>
+    <!-- end cart office -->
+
+    <!-- strat -->
+    <div class="wathsap">
+      <div class="phone">
+        <a href="tel:201021219588"><i class="fa-solid fa-phone"></i></a>
+      </div>
+      <div class="weth">
+        <a
+          href="https://wa.me/201021219588?text=السلام%20عليكم،%20أنا%20مهتم%20بخدماتكم"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+    </div>
+    <!-- end -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="right">
+          <h2 class="name">Pic<span>k</span>io</h2>
+          <p>
+            نلتزم بتقديم الجودة التي تثق بها <br />والخدمة التي تعتمد عليها في
+            كل خطوة
+          </p>
+
+          <div class="logos">
+            <p class="icon">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-tiktok"></i>
+            </p>
+          </div>
+        </div>
+        <div class="center">
+          <div class="locion icon">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>7 Esmat Khedr Street, off
+              El-Nozha nasr city
+            </p>
+          </div>
+          <div class="phone icon">
+            <p>
+              <a href="tel:201021219588"><i class="fa-solid fa-phone"></i></a
+              >01016434958
+            </p>
+          </div>
+          <div class="email icon">
+            <p><i class="fa fa-envelope"></i>pickiooffice@gmail.com</p>
+          </div>
+        </div>
+        <div class="left">
+          <div class="logo">
+            <h2 class="name">Pic<span>k</span>io</h2>
+          </div>
+          <p>سياسية الاسترجاع</p>
+          <p>سياسة الخصوصية</p>
+          <p>الشروط و الاحكام</p>
+          <p>الضمان</p>
+        </div>
+      </div>
+      <div class="nkbl">
+        <h2>نحن نقبل</h2>
+        <img src="iemg/aman.adafb70a.png" alt="" />
+        <img src="iemg/master.90080a1a.svg" alt="" />
+        <img src="iemg/premium.d73fb905.png" alt="" />
+        <img src="iemg/souhoola.9744d9f9.jpg" alt="" />
+        <img src="iemg/sympl.24a60472.png" alt="" />
+        <img src="iemg/valu.e0b214fb.png" alt="" />
+        <img src="iemg/vcash.35c6becb.png" alt="" />
+        <img src="iemg/visa.76742dc7.svg" alt="" />
+      </div>
+      <div class="copy">Ⓒ جميع الحقوق محفوظة 2025</div>
+    </div>
+    <!-- end footer -->
+
+    <script src="JS/mine.js"></script>
+    <script>
+      function addToCart(button) {
+        // تحميل السلة من localStorage أو إنشاء مصفوفة جديدة
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const productCard = button.closest(".card");
+        const productName = productCard.querySelector("h2").textContent;
+        const productPrice =
+          productCard.querySelector("#description").textContent;
+        const productImage = productCard
+          .querySelector("img")
+          .getAttribute("src");
+        const productCode =
+          productCard.getAttribute("data-code") ||
+          productCard.querySelector(".product-code").textContent;
+        const productId = productName + productPrice;
+
+        const existingItemIndex = cart.findIndex(
+          (item) => item.id === productId
+        );
+
+        if (existingItemIndex === -1) {
+          // المنتج مش في السلة، ضيفه
+          const productData = {
+            name: productName,
+            price: productPrice,
+            id: productId,
+            image: productImage,
+            code: productCode,
+          };
+
+          cart.push(productData);
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          button.textContent = "تمت الإضافة!";
+          button.style.backgroundColor = "#4CAF50";
+          button.style.color = "white";
+
+          setTimeout(() => {
+            button.textContent = "إزالة من السلة";
+            button.style.backgroundColor = "#ff9800";
+          }, 1000);
+        } else {
+          // المنتج موجود بالفعل، احذفه
+          cart.splice(existingItemIndex, 1);
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          button.textContent = "ADD TO MY WISHLIST";
+          button.style.backgroundColor = "";
+          button.style.color = "";
+        }
+
+        console.log("السلة حالياً:", cart);
+      }
+
+      let quantity = 2;
+      const pricePerItem = 420;
+
+      function changeQty(amount) {
+        quantity = Math.max(1, quantity + amount);
+        document.getElementById("qty").innerText = quantity;
+        document.getElementById("total-price").innerText =
+          "$" + quantity * pricePerItem;
+      }
+
+      function showTab(tabId, btn) {
+        const tabs = document.querySelectorAll(".tab");
+        const buttons = document.querySelectorAll(".tab-buttons button");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        buttons.forEach((b) => b.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+        btn.classList.add("active");
+      }
+
+      function changeColor() {
+        const color = document.getElementById("colorSelect").value;
+        document.getElementById("colorCircle").style.backgroundColor = color;
+      }
+    </script>
+
+    <script>
+      function toggleColorOptions() {
+        const options = document.getElementById("colorOptions");
+        options.style.display =
+          options.style.display === "block" ? "none" : "block";
+      }
+
+      function selectColor(color) {
+        document.getElementById("selectedColor").style.backgroundColor = color;
+        document.getElementById("colorOptions").style.display = "none";
+      }
+      // اختيار جميع الأزرار التي ستقوم بإرسال الرسالة عبر واتساب
+      const whatsappButtons = document.querySelectorAll(".buttons .cart");
+
+      // إضافة حدث الضغط لكل زر
+      whatsappButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          // الحصول على العنصر الذي يحتوي على كود المنتج
+          const product = e.target.closest(".card");
+          const productCode = product.getAttribute("data-code");
+
+          // إعداد الرسالة التي سيتم إرسالها عبر واتساب
+          const message = `مرحبًا! أريد شراء المنتج التالي:\n\nكود المنتج: ${productCode}`;
+
+          // ترميز الرسالة لتناسب رابط واتساب
+          const encodedMessage = encodeURIComponent(message);
+
+          // رابط واتساب
+          const whatsappUrl = `https://wa.me/201021219588?text=${encodedMessage}`;
+
+          // فتح الرابط
+          window.open(whatsappUrl, "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>

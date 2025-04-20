@@ -1,0 +1,32 @@
+.protofle {
+    display: flex
+;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 60px;
+}
+.protofle .card{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        cursor: pointer;
+}
+.protofle .card .img {
+}
+.protofle .card img {
+width: 320px;
+height: 220px;
+    border-radius: 10px;
+
+}
+.protofle .card .concnt {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.protofle .card .concnt h2 {
+padding: 5px;
+}
+.protofle .card .concnt p {
+color: #555;
+}
